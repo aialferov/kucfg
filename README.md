@@ -5,6 +5,14 @@
 A tool for managing [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
 configurations.
 
+## Install
+
+To install the tool from a source directory:
+
+```
+$ make install
+```
+
 ## Usage
 
 Kucfg overwrites the "$HOME/.kube/config" file to make it a symbolic link to one
@@ -65,3 +73,14 @@ Sometimes it turns out that kubectl uses some other configuration rather than
 that set as a current. That might happen if the "KUBECONFIG" variable is set.
 Therefore kucfg warns while using the "set" or "list" commands if that variable
 is set.
+
+## Uninstall
+
+To uninstall the tool from a sorouce directory:
+
+```
+$ make uninstall
+```
+
+Or simply remove the "/usr/local/bin/kucfg" file. Note: the file might be
+located in a different directory if installation was customized.
