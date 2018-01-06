@@ -7,12 +7,12 @@ configurations.
 
 ## Usage
 
-Kucfg overwrites the "~/.kube/config" file to make it a symbolic link to one
-of the files located in the "~/.kucfg" directory. Therefore to use the tool you
-need to create this directory and put you kubectl configuration files there.
+Kucfg overwrites the "$HOME/.kube/config" file to make it a symbolic link to one
+of the files located in the "$HOME/.kucfg" directory. Therefore to use the tool
+you need to create this directory and put you kubectl configuration files there.
 
-To avoid destroying important data it does not overwrite the "~/.kube/config"
-file if it is not a symbolic link.
+To avoid destroying important data it does not overwrite the
+"$HOME/.kube/config" file if it is not a symbolic link.
 
 Running the tool without arguments prints out its usage:
 
@@ -30,8 +30,8 @@ Each command can be invoked with the corresponding shortcut.
 
 ### List
 
-Once the configuration files are in the "~/.kucfg" directory they appeared as
-available in the listing:
+Once the configuration files are in the "$HOME/.kucfg" directory they appeared
+as available in the listing:
 
 ```
 $ kucfg list
@@ -43,7 +43,7 @@ aws-admin
 ### Current
 
 The current configuration is the file which is currently a target of the
-"~/.kube/config" file.
+"$HOME/.kube/config" file.
 
 ```
 $ kucfg current
@@ -52,8 +52,8 @@ minikube-admin
 
 ### Set
 
-To set the current configuration, i.e. update the "~/.kube/config" symbolic link
-with one of the available configuration files use the "set" command:
+To set the current configuration, i.e. update the "$HOME/.kube/config" symbolic
+link with one of the available configuration files use the "set" command:
 
 ```
 $ kucfg set gce-admin
